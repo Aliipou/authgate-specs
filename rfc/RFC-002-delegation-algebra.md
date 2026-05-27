@@ -8,7 +8,7 @@
 
 ## Abstract
 
-Defines the algebraic structure governing how capabilities may be delegated between agents in the freedom-kernel runtime. Authority is modeled as a directed acyclic graph (DAG) with bounded depth, and delegation is governed by a set of formal rules that preserve the attenuation invariant established in RFC-001.
+Defines the algebraic structure governing how capabilities may be delegated between agents in the authgate-kernel runtime. Authority is modeled as a directed acyclic graph (DAG) with bounded depth, and delegation is governed by a set of formal rules that preserve the attenuation invariant established in RFC-001.
 
 ---
 

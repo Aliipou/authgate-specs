@@ -8,7 +8,7 @@
 
 ## Abstract
 
-Defines the formal mathematical structure of capability attenuation in the freedom-kernel runtime. Attenuation is the mechanism by which delegated authority is strictly weakened relative to the delegating agent's authority. This RFC establishes attenuation as a partial order on capability sets, proves that the capability system forms a lattice under this order, analyzes the compositional properties of chained attenuation, and extends the model to confidence and time dimensions. A proof that attenuation prevents privilege escalation is provided in the final section.
+Defines the formal mathematical structure of capability attenuation in the authgate-kernel runtime. Attenuation is the mechanism by which delegated authority is strictly weakened relative to the delegating agent's authority. This RFC establishes attenuation as a partial order on capability sets, proves that the capability system forms a lattice under this order, analyzes the compositional properties of chained attenuation, and extends the model to confidence and time dimensions. A proof that attenuation prevents privilege escalation is provided in the final section.
 
 ---
 
@@ -122,7 +122,7 @@ This closure property ensures that composed attenuations remain valid attenuatio
 
 ### 4.1 Confidence as a Capability Dimension
 
-Beyond the binary question of whether a capability is granted, the freedom-kernel introduces a **confidence score** `κ ∈ [0, 1]` on each capability grant, representing the degree to which the issuing principal trusts the recipient to exercise the capability safely and correctly.
+Beyond the binary question of whether a capability is granted, the authgate-kernel introduces a **confidence score** `κ ∈ [0, 1]` on each capability grant, representing the degree to which the issuing principal trusts the recipient to exercise the capability safely and correctly.
 
 A capability grant with confidence is represented as a triple `(k, r, κ)`.
 
@@ -194,7 +194,7 @@ The effective window is the intersection of all intervals in the chain. This is 
 
 ### 6.1 Theorem (Privilege Escalation Impossibility)
 
-**Theorem:** Under the freedom-kernel attenuation model, no agent can obtain a capability grant that is strictly greater (in the `⊑` order) than any grant held by a registered human principal in the trust root set `P`.
+**Theorem:** Under the authgate-kernel attenuation model, no agent can obtain a capability grant that is strictly greater (in the `⊑` order) than any grant held by a registered human principal in the trust root set `P`.
 
 Formally:
 

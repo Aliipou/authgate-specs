@@ -8,7 +8,7 @@
 
 ## Abstract
 
-Defines how capability authority is resolved across distributed nodes in the freedom-kernel runtime. This RFC specifies the format and validation of signed capability tokens, procedures for handling stale permissions under clock skew and network partitions, Byzantine-resilient authority validation, and the structure of the immutable audit chain that records delegation, revocation, and action attestation history.
+Defines how capability authority is resolved across distributed nodes in the authgate-kernel runtime. This RFC specifies the format and validation of signed capability tokens, procedures for handling stale permissions under clock skew and network partitions, Byzantine-resilient authority validation, and the structure of the immutable audit chain that records delegation, revocation, and action attestation history.
 
 ---
 
@@ -16,7 +16,7 @@ Defines how capability authority is resolved across distributed nodes in the fre
 
 In a single-node deployment, authority resolution is straightforward: a central delegation store is queried synchronously. In distributed deployments, agents may execute on nodes separated by network boundaries, replication lag, and potential Byzantine faults. This RFC defines the mechanisms that allow authority to be validated efficiently without requiring round-trips to a central store on every capability exercise, while preserving the invariants defined in RFC-002 and RFC-003.
 
-The design draws on principles from object-capability systems (E language, Caja), token-based delegation (Macaroons, SPIFFE/SPIRE), and Byzantine fault-tolerant consensus (PBFT, HotStuff) — but is tailored specifically to the capability-governance semantics of the freedom-kernel.
+The design draws on principles from object-capability systems (E language, Caja), token-based delegation (Macaroons, SPIFFE/SPIRE), and Byzantine fault-tolerant consensus (PBFT, HotStuff) — but is tailored specifically to the capability-governance semantics of the authgate-kernel.
 
 ---
 
@@ -108,7 +108,7 @@ function validate_token(token: SignedCapabilityToken, cap: Capability, resource:
 
 ### 2.4 Token Issuance
 
-Tokens are issued by the freedom-kernel authority service upon successful delegation (RFC-002). Token issuance requires:
+Tokens are issued by the authgate-kernel authority service upon successful delegation (RFC-002). Token issuance requires:
 
 1. The issuing agent holds a valid SCT granting `DELEGATE` for the capability being delegated.
 2. The new token's claims satisfy all attenuation rules (RFC-002 D1).
@@ -140,7 +140,7 @@ Key registration requires a human principal. Machine agents cannot register new 
 
 ### 3.1 Clock Skew
 
-Distributed systems cannot assume perfectly synchronized clocks. The freedom-kernel defines the following clock skew handling:
+Distributed systems cannot assume perfectly synchronized clocks. The authgate-kernel defines the following clock skew handling:
 
 **`CLOCK_SKEW_TOLERANCE`**: A global configuration parameter (recommended default: 30 seconds) applied when evaluating `expires_at` timestamps. A token is considered expired if:
 
@@ -178,7 +178,7 @@ Mitigations:
 
 ### 4.1 Threat Model
 
-The freedom-kernel assumes the following adversary capabilities in a Byzantine setting:
+The authgate-kernel assumes the following adversary capabilities in a Byzantine setting:
 
 - A Byzantine agent may forge, replay, or modify capability claims.
 - A Byzantine node may lie about revocation status.
@@ -232,7 +232,7 @@ A Byzantine replica may return different revocation statuses to different queryi
 
 ### 5.1 Purpose
 
-The audit chain is an append-only, cryptographically linked record of all authority-relevant events in the freedom-kernel. It serves as the primary tool for:
+The audit chain is an append-only, cryptographically linked record of all authority-relevant events in the authgate-kernel. It serves as the primary tool for:
 
 - **Post-incident forensics:** Reconstructing what authority was held, exercised, and revoked at any point in time.
 - **Compliance attestation:** Demonstrating that the governance rules were followed.

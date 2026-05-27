@@ -8,7 +8,7 @@
 
 ## Abstract
 
-Defines the semantics of trust roots in the freedom-kernel capability-governance system. Trust roots are the mandatory anchors of all authority: every capability grant must trace back to a registered human principal. This RFC specifies what constitutes a trust root, how trust domains partition the authority namespace, the rules for cross-domain delegation, the hierarchy and inheritance structure of trust domains, and the system's behavior when a trust root is compromised. Principal authentication is explicitly out of scope; this RFC defines a structural invariant, not an authentication mechanism.
+Defines the semantics of trust roots in the authgate-kernel capability-governance system. Trust roots are the mandatory anchors of all authority: every capability grant must trace back to a registered human principal. This RFC specifies what constitutes a trust root, how trust domains partition the authority namespace, the rules for cross-domain delegation, the hierarchy and inheritance structure of trust domains, and the system's behavior when a trust root is compromised. Principal authentication is explicitly out of scope; this RFC defines a structural invariant, not an authentication mechanism.
 
 ---
 
@@ -16,7 +16,7 @@ Defines the semantics of trust roots in the freedom-kernel capability-governance
 
 ### 1.1 Axiom A4: Human Ownership
 
-The freedom-kernel is founded on **Axiom A4**:
+The authgate-kernel is founded on **Axiom A4**:
 
 > Every machine agent in the system has exactly one registered human owner. All authority exercised by a machine agent must be traceable to a delegation chain rooted at a registered human principal.
 
@@ -62,7 +62,7 @@ Any capability exercise by a machine agent for which no such chain exists MUST b
 
 ### 2.1 Definition
 
-A **trust domain** `D = (id, policy, principals, agents)` is an isolated authority namespace within the freedom-kernel system:
+A **trust domain** `D = (id, policy, principals, agents)` is an isolated authority namespace within the authgate-kernel system:
 
 ```
 TrustDomain = {
@@ -131,7 +131,7 @@ Dc.policy.default_max_delegation_depth ≤ Dp.policy.default_max_delegation_dept
 
 A child domain inherits its parent domain's policy as a floor: the child's policy MUST be at least as restrictive as the parent's. The child MAY impose additional restrictions but CANNOT relax the parent's constraints.
 
-**Inheritance rule:** When the freedom-kernel evaluates a capability exercise by an agent in domain `Dc`, it applies the union of all policies along the path from `Dc` to the root domain. Specifically, the effective prohibited capability set is:
+**Inheritance rule:** When the authgate-kernel evaluates a capability exercise by an agent in domain `Dc`, it applies the union of all policies along the path from `Dc` to the root domain. Specifically, the effective prohibited capability set is:
 
 ```
 effective_prohibited(Dc) = ⋃ { D.policy.prohibited_capabilities | D is an ancestor of Dc or D = Dc }
@@ -215,7 +215,7 @@ Two domains `D₁` and `D₂` under a common parent `Dp` may delegate to each ot
 
 ### 5.1 Scope of the Invariant
 
-The trust root semantics defined in this RFC are **structural invariants** — they define what the system enforces, not how the system detects or prevents principal compromise. The freedom-kernel does NOT provide:
+The trust root semantics defined in this RFC are **structural invariants** — they define what the system enforces, not how the system detects or prevents principal compromise. The authgate-kernel does NOT provide:
 
 - Principal authentication (verifying that the human behind a key is who they claim to be)
 - Multi-factor authentication for principal actions
@@ -226,7 +226,7 @@ These are concerns for the authentication and identity layer, which is explicitl
 
 ### 5.2 When a Trust Root is Compromised
 
-If a human principal's private key is compromised, the attacker gains the principal's full authority, including the ability to issue new delegations, revoke existing ones, and modify domain policy. The freedom-kernel cannot distinguish between actions by the legitimate principal and actions by the attacker once the key is compromised.
+If a human principal's private key is compromised, the attacker gains the principal's full authority, including the ability to issue new delegations, revoke existing ones, and modify domain policy. The authgate-kernel cannot distinguish between actions by the legitimate principal and actions by the attacker once the key is compromised.
 
 **What the system CAN provide:**
 
@@ -248,7 +248,7 @@ If a human principal's private key is compromised, the attacker gains the princi
 
 ### 5.3 Recommended Mitigations (Informative)
 
-The following mitigations are recommended but not enforced by the freedom-kernel itself:
+The following mitigations are recommended but not enforced by the authgate-kernel itself:
 
 - **M-of-N principal authorization:** For `CRITICAL` and `CATASTROPHIC` capability grants, require approval from `M` out of `N` human principals (multi-party authorization). This limits the blast radius of a single compromised principal.
 - **Hardware security modules:** Principal signing keys SHOULD be held in HSMs or equivalent hardware-backed key stores. Software-only key storage is discouraged.
@@ -266,6 +266,6 @@ The following mitigations are recommended but not enforced by the freedom-kernel
 - MUST: Cross-domain delegated capabilities MUST be a subset of those authorized by the `CrossDomainGrant`.
 - MUST: Cross-domain grants MUST NOT permit capabilities prohibited by either the source or target domain's effective policy.
 - MUST: Upon key revocation, all delegations issued by the revoked key MUST cascade-revoke per RFC-003 §3.
-- MUST NOT: The freedom-kernel MUST NOT assume that a principal's identity has been authenticated. Authentication is out of scope. The structural invariants hold regardless of authentication layer behavior.
+- MUST NOT: The authgate-kernel MUST NOT assume that a principal's identity has been authenticated. Authentication is out of scope. The structural invariants hold regardless of authentication layer behavior.
 - SHOULD: Deployments with `CRITICAL` or `CATASTROPHIC` capability grants SHOULD implement M-of-N principal authorization as a mitigation against trust root compromise.
 - SHOULD: Principal signing keys SHOULD be held in hardware-backed key stores.

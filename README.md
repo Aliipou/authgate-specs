@@ -1,6 +1,6 @@
-# freedom-specs
+# authgate-specs
 
-Formal RFC specifications for the [freedom-kernel](https://github.com/Aliipou/freedom-kernel) capability-governance runtime.
+Formal RFC specifications for the [authgate-kernel](https://github.com/Aliipou/authgate-kernel) capability-governance runtime.
 
 ## RFCs
 
@@ -13,9 +13,9 @@ Formal RFC specifications for the [freedom-kernel](https://github.com/Aliipou/fr
 | [RFC-005](rfc/RFC-005-capability-attenuation.md) | Capability Attenuation | Draft |
 | [RFC-006](rfc/RFC-006-trust-root-semantics.md) | Trust Root Semantics | Draft |
 
-## Relationship to freedom-kernel
+## Relationship to authgate-kernel
 
-These specs define the formal semantics that `freedom-kernel` implements. The kernel enforces the invariants stated here. When a spec and the implementation diverge, the spec is authoritative.
+These specs define the formal semantics that `authgate-kernel` implements. The kernel enforces the invariants stated here. When a spec and the implementation diverge, the spec is authoritative.
 
 ## Status
 

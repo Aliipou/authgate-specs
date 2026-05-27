@@ -8,7 +8,7 @@
 
 ## Abstract
 
-Defines the closed, finite vocabulary of capability kinds recognized by the freedom-kernel runtime, their semantics, and risk classification.
+Defines the closed, finite vocabulary of capability kinds recognized by the authgate-kernel runtime, their semantics, and risk classification.
 
 ---
 

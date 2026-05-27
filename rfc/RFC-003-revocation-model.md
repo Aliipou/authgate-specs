@@ -8,7 +8,7 @@
 
 ## Abstract
 
-Defines the revocation semantics for the freedom-kernel capability-governance runtime. Revocation is the mechanism by which an authority holder terminates a previously issued delegation, making the revoked capability no longer exercisable by the recipient or any downstream agent. This RFC specifies two primary revocation models (Eager and Lazy), cascading revocation semantics, lease expiration, freeze semantics, and the consistency guarantees and trade-offs associated with each approach.
+Defines the revocation semantics for the authgate-kernel capability-governance runtime. Revocation is the mechanism by which an authority holder terminates a previously issued delegation, making the revoked capability no longer exercisable by the recipient or any downstream agent. This RFC specifies two primary revocation models (Eager and Lazy), cascading revocation semantics, lease expiration, freeze semantics, and the consistency guarantees and trade-offs associated with each approach.
 
 ---
 
@@ -16,7 +16,7 @@ Defines the revocation semantics for the freedom-kernel capability-governance ru
 
 Delegation without revocation is permanent authority transfer. The ability to revoke is a necessary condition for meaningful governance: a principal must be able to terminate an agent's authority when that agent is compromised, misbehaves, or is simply no longer needed. Revocation is therefore as fundamental as delegation in any capability-governance system.
 
-The freedom-kernel faces the additional challenge that agents may be distributed across multiple nodes, with delegation state replicated or sharded. This creates a fundamental tension between:
+The authgate-kernel faces the additional challenge that agents may be distributed across multiple nodes, with delegation state replicated or sharded. This creates a fundamental tension between:
 
 - **Consistency:** every node immediately learns of a revocation
 - **Availability:** agents can continue operating without contacting a central authority
@@ -232,7 +232,7 @@ In distributed deployments where the delegation store is replicated across multi
 
 ### 7.1 Safe-Failure Mode
 
-The freedom-kernel adopts a **fail-safe default:** in the absence of confirmation that a revocation has propagated, the system defaults to denying capability exercises. Specifically:
+The authgate-kernel adopts a **fail-safe default:** in the absence of confirmation that a revocation has propagated, the system defaults to denying capability exercises. Specifically:
 
 ```
 if (delegation_store_unreachable() || last_sync_age() > MAX_SYNC_AGE):
