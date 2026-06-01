@@ -20,3 +20,10 @@ These specs define the formal semantics that `authgate-kernel` implements. The k
 ## Status
 
 All RFCs are currently in **Draft** status. They describe the intended semantics, not a finalized standard.
+
+## License
+
+**Source-available** under the [PolyForm Noncommercial License 1.0.0](LICENSE) — see also [`NOTICE`](NOTICE).
+Research, educational, and evaluation use are allowed with attribution; commercial use, production
+deployment, resale, and SaaS require a separate commercial license. Contact **Ali Pourrahim —
+Alipourrahim.ap@gmail.com**.
