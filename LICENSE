@@ -1,21 +1,129 @@
-MIT License
+Source-Available, Contact-First License
+Version 1.0 — 2026
 
-Copyright (c) 2026 Ali Pourrahim
+Required Notice: Copyright © 2026 Ali Pourrahim
+(https://github.com/Aliipou). All rights reserved.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+================================================================
+0. SUMMARY (non-binding; the numbered terms below control)
+================================================================
+You may READ and privately EVALUATE the material in this
+repository. You may NOT use, run, reproduce beyond evaluation,
+modify, distribute, or build on it — for ANY purpose, by ANY person
+or organization, including educational institutions, research/
+innovation (RDI) offices, and commercial entities — without the
+Author's PRIOR WRITTEN PERMISSION. You may never claim the Work,
+its ideas, or any derivative as your own work or as originating
+from anyone other than the Author. To request permission, contact
+the Author first (Section 7).
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+================================================================
+1. DEFINITIONS
+================================================================
+"Work" means the specifications, documentation, designs, source
+code, and all other material in this repository and any portion
+of it.
+"Author" / "Licensor" means Ali Pourrahim
+(https://github.com/Aliipou), the sole owner of the copyright in
+the Work, who created it independently and without the resources,
+funding, employment, or coursework of any third party.
+"You" means any individual or legal entity exercising any right
+under this License.
+"Use" means to run, execute, reproduce (beyond Evaluation),
+modify, translate, adapt, create derivative works of, distribute,
+publicly display, publish, sublicense, sell, incorporate into any
+product, service, dataset, model, or research output, or otherwise
+exploit the Work in any way.
+"Evaluation" means reading the material and making one local copy
+solely to study and assess it privately, with no other Use.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+================================================================
+2. RESERVATION OF RIGHTS
+================================================================
+The Work is the exclusive property of the Author. All rights not
+expressly granted in Section 3 are reserved. No right or license is
+granted by implication, estoppel, or otherwise.
+
+================================================================
+3. LIMITED PERMISSION GRANTED
+================================================================
+Subject to full compliance with this License, the Author grants You
+a personal, non-exclusive, non-transferable, revocable permission
+to perform Evaluation of the Work. This is the ONLY permission
+granted without prior written authorization.
+
+================================================================
+4. PERMISSION REQUIRED FOR ALL OTHER USE
+================================================================
+Any Use of the Work beyond Evaluation is prohibited unless and
+until the Author grants You a separate, signed, written license for
+that specific Use. This requirement applies to everyone without
+exception, expressly including:
+  (a) educational institutions, universities, and their faculties,
+      departments, staff, and students;
+  (b) research, development, and innovation (RDI) units, technology-
+      transfer offices, incubators, and accelerators;
+  (c) government, public-sector, and nonprofit organizations; and
+  (d) commercial entities of any size.
+Funding source, nonprofit status, or "research" or "educational"
+characterization does NOT create any permitted Use.
+
+================================================================
+5. ATTRIBUTION AND INTEGRITY (anti-credit-taking)
+================================================================
+5.1 You must not remove, obscure, or alter the "Required Notice"
+    line above or any copyright or authorship notice in the Work.
+5.2 You must not represent, directly or by implication, that the
+    Work, its design, its underlying ideas, or any derivative of it
+    was created, originated, co-authored, or owned by anyone other
+    than the Author.
+5.3 You must not claim, register, publish, or seek credit for the
+    Work or its ideas — whether as a research output, thesis, grant
+    deliverable, RDI achievement, publication, patent, or otherwise
+    — as the work of any person or organization other than the
+    Author, without the Author's prior written permission.
+5.4 Any Use authorized under Section 4 must carry clear, prominent
+    attribution to the Author in the form the Author specifies.
+
+================================================================
+6. INTELLECTUAL PROPERTY; NO PATENT OR TRADEMARK LICENSE
+================================================================
+No patent license and no trademark license are granted under this
+License. The Author reserves all patent rights, naming rights, and
+moral rights to the fullest extent permitted by applicable law,
+including the right to be identified as the author.
+
+================================================================
+7. HOW TO REQUEST PERMISSION
+================================================================
+To request any license beyond Evaluation, or to discuss attribution
+or collaboration, contact the Author IN WRITING BEFORE any Use:
+  Author:  Ali Pourrahim
+  GitHub:  https://github.com/Aliipou
+  Email:   Alipourrahim.ap@gmail.com
+Permission is effective only when granted by the Author in a signed
+writing that identifies the permitted Use. Silence or non-response
+is not permission.
+
+================================================================
+8. TERMINATION
+================================================================
+Any breach of this License terminates all permissions granted to
+You automatically and immediately. Upon termination You must cease
+all Use and destroy all copies in Your possession. Sections 2, 5,
+6, 9, and 10 survive termination.
+
+================================================================
+9. NO WARRANTY
+================================================================
+THE WORK IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND
+NON-INFRINGEMENT.
+
+================================================================
+10. LIMITATION OF LIABILITY
+================================================================
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE AUTHOR SHALL NOT BE
+LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM OR
+IN CONNECTION WITH THE WORK OR ANY USE OF IT.
