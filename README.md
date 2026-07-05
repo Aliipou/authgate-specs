@@ -17,6 +17,16 @@ Formal RFC specifications for the [authgate-kernel](https://github.com/Aliipou/a
 
 These specs define the formal semantics that `authgate-kernel` implements. The kernel enforces the invariants stated here. When a spec and the implementation diverge, the spec is authoritative.
 
+## Where authority sits in the system
+
+The full system is **Legitimacy ⊥ Authority**, both layers being one theory made
+executable — the authority layer these RFCs specify is *not* neutral plumbing.
+Canonical pipeline (locked): identity admission → FDK legitimacy (DENY-only) →
+**authority (grant within legitimacy — specified here)** → PEP execute + audit.
+**Invariant:** legitimacy may only DENY; authority never overrides a legitimacy
+denial. These RFCs formalize only the authority half; legitimacy is specified in the
+FDK line.
+
 ## Status
 
 All RFCs are currently in **Draft** status. They describe the intended semantics, not a finalized standard.
