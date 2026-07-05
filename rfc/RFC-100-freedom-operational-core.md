@@ -14,12 +14,22 @@ Mohammad Ali Jannat Khah Doust) — as currently spread across `freedom-theory-w
 `freedom-policy/dos_freedom/`, and the `freedom-decision-kernel/spec/` set — into the
 **smallest consistent set of predicates that generates the same ALLOW/DENY/DEFER decisions.**
 
-Three lines must stay explicit and stay closed:
+Three lines must stay explicit:
 
-1. **The philosophical thesis is closed.** Its own author recorded it as a negative
-   result: the normative content reduces to Nozick (side-constraints), Pettit
-   (non-domination), and Sen (capability/exit). This RFC does **not** reopen that. It
-   treats the theory strictly as a *specification language for a legitimacy filter*.
+1. **The independence question is REOPENED, not closed.** An earlier pass recorded a
+   *negative* result — that independence from Nozick (side-constraints), Pettit
+   (non-domination), and Sen (capability/exit) had *not been demonstrated* under the
+   evidence available then. That was always explicitly **"undetermined, not refuted,"
+   and reopenable by new evidence** (see `freedom-decision-kernel/STATUS.md` and the
+   green-team defense in `paper/green_team/01_defend_fdk_independence.md`). New evidence
+   has since been introduced, so the status here is **OPEN / under active
+   re-evaluation** — not a settled negative. This RFC does not *prove* independence; it
+   stops asserting the closed-negative verdict, which was overstated.
+   Note also: **the theory is realized by BOTH layers, not just this one.** FDK
+   (legitimacy — ownership/consent/verifier) *and* AuthGate (authority — delegated
+   machine property rights, the tool-permission layer, runtime enforcement) are
+   together the theory made executable. This RFC optimizes the *legitimacy* portion; it
+   is not the whole theory, and it is not "merely a legitimacy filter."
 
 2. **Any scientific-superiority claim is UNPROVEN.** The original THEORY.md claims this
    filter "beats" RLHF / Constitutional AI / OPA / NIST RMF. **That claim is not
