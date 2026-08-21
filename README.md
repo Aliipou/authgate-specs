@@ -1,5 +1,7 @@
 # authgate-specs
 
+**Live (graph):** [https://ali-authgate-specs.vercel.app](https://ali-authgate-specs.vercel.app)
+
 Formal RFC specifications for the [authgate-kernel](https://github.com/Aliipou/authgate-kernel) capability-governance runtime.
 
 ## RFCs
